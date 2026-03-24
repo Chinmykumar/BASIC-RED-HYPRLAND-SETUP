@@ -1,0 +1,62 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    display-drun: "creep";
+}
+
+* {
+    bg: #1c1c1c;
+    fg: rgba(230,230,230,0.90);
+    red: rgba(255,0,0,0.55);
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 40%;
+    border: 1px;
+    border-color: @red;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+}
+
+mainbox {
+    padding: 12px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    padding: 6px;
+}
+
+prompt {
+    text: "creep";
+    text-color: rgba(255,0,0,0.65);
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+listview {
+    lines: 8;
+    spacing: 6px;
+    background-color: #1c1c1c;
+}
+
+element normal {
+    background-color: #1c1c1c;
+    text-color: #e6e6e6;
+}
+
+element active {
+    background-color: #2a2a2a;
+    text-color: #ffffff;
+}
+
+element selected {
+    background-color: #3a0f0f;
+    text-color: #ffffff;
+}

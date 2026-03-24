@@ -1,0 +1,60 @@
+* {
+    font: "JetBrainsMono Nerd Font 13";
+
+    bg: rgba(10, 10, 14, 0.65);   /* dark glass */
+    fg: #e6e6e6;
+    red: #ff4d6d;
+}
+
+window {
+    width: 620px;
+    border-radius: 18px;
+    background-color: @bg;
+    border: 2px;
+    border-color: rgba(255,77,109,0.85);
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 16px;
+}
+
+inputbar {
+    background-color: transparent;
+    children: [ entry ];
+    margin: 0 0 12px 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "switch window…";
+}
+
+listview {
+    background-color: transparent;
+    lines: 6;
+    spacing: 8px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 10px;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: rgba(255, 77, 109, 0.25);
+    text-color: @fg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-icon {
+    background-color: transparent;
+}

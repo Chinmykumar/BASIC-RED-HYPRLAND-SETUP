@@ -1,0 +1,74 @@
+/* GLOBAL FONT */
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px; /* ↓ slightly smaller to prevent overflow */
+}
+
+/* WAYBAR WINDOW */
+window#waybar {
+  background: rgba(20, 20, 20, 0.95);
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 5px 10px;
+  padding: 6px 10px; /* tighter padding */
+  border: 1px solid rgba(255,255,255,0.15);
+  min-height: 30px;
+}
+
+/* COMMON MODULE RULE — prevents overflow */
+#workspaces,
+#battery,
+#network,
+#pulseaudio,
+#clock {
+  padding: 0 6px;
+  margin: 0;
+  min-width: 0;
+}
+
+/* WORKSPACES */
+#workspaces button {
+  padding: 0 6px;
+  color: #aaa;
+}
+#workspaces button.active {
+  color: #fff;
+}
+
+/* BATTERY */
+#battery { color: #ddd; }
+#battery.charging { color: #8fd694; }
+#battery.warning { color: #f2c96d; }
+#battery.critical { color: #f28b82; }
+
+/* NETWORK */
+#network { color: #ddd; }
+#network.disconnected { color: #888; }
+
+/* AUDIO */
+#pulseaudio { color: #cdd6f4; }
+#pulseaudio.muted { color: #f38ba8; }
+
+/* CLOCK — MAIN FIX */
+#clock {
+  font-size: 13px;
+  padding: 0 6px;
+}
+
+
+window#waybar {
+    border: 1px solid rgba(139, 0, 0, 0.66);
+    border-radius: 12px;
+    margin: 6px 8px;
+    background: transparent;
+}
+
+#custom-media {
+  border: 1px solid rgba(139, 0, 0, 0.7);
+  border-radius: 6px;
+  padding: 0 8px;
+  margin: 2px 6px;
+  box-shadow: 0 0 6px rgba(139, 0, 0, 0.6);
+}
+
+

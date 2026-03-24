@@ -1,0 +1,93 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "mpris"
+  ],
+
+  "modules-right": [
+    "custom/media",
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    }
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": " ",
+    "format-linked": " ",
+    "format-disabled": " ",
+    "format-off": " ",
+    "format-on": " ",
+    "tooltip": false,
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+    "tooltip-format": "{capacity}%"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "on-click": "yad --calendar --no-buttons --width=300 --height=250"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-connected": "",
+    "format-on": "",
+    "format-off": "",
+    "format-disabled": "",
+    "format-enabled": "",
+    "format-disconnected": "",
+    "tooltip": false,
+    "on-click": "blueman-manager"
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "player-icons": {
+      "default": "▶",
+      "spotify": ""
+    }
+  },
+
+  "custom/media": {
+    "exec": "sh -c 'playerctl status 2>/dev/null | grep -q Playing && echo ⏮ ⏯ ⏭ || echo \"\"'",
+    "format": "{}",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl next",
+    "on-click-right": "playerctl previous",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5"
+  }
+}
